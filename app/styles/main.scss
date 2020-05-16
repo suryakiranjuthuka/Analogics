@@ -1,0 +1,25 @@
+// bower:scss
+// endbower
+
+/*----------- Global Variables -----------*/
+// Import matters first variables because of scoping
+@import "helpers/animations";
+@import "helpers/include-media";
+@import "base/variables";
+// Primary Importance Ends
+
+/*----------- Base styles -----------*/
+@import "base/reset";
+@import "base/base";
+
+/*----------- Components -----------*/
+@import "components/cards";
+@import "components/dialog";
+@import "components/hexagon";
+@import "components/slider";
+
+/*----------- Pages -----------*/
+@import "pages/home";
+@import "pages/products";
+@import "pages/aboutus";
+@import "pages/contact";

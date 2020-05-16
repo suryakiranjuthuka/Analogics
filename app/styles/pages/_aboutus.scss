@@ -1,0 +1,586 @@
+// ?====================New Code================
+
+.about-page {
+  // ? About us Section
+  .about {
+    padding: 25px 0;
+    text-align: center;
+
+    h1 {
+      padding: 20px;
+      text-align: center;
+    }
+
+    p {
+      padding: 0 20px;
+      max-width: 1000px;
+      margin: 18px auto;
+      text-align: left;
+    }
+
+    a {
+      margin-top: 0;
+    }
+
+    .hiddenAboutUs {
+      position: relative;
+      width: 100%;
+      max-height: 0;
+      opacity: 0;
+      transition: max-height 0.3s,opacity 0.3s;
+      overflow: hidden;
+
+      &.open {
+        max-height: 1000px;
+        opacity: 1;
+      }
+    }
+  }
+  // ? Group Companies Section
+  .groupcompanies {
+    padding: 60px 0 40px;
+    border-top: 1px solid rgba(0,0,0,.078);
+
+    header {
+      display: flex;
+      flex-flow: row;
+      align-items: center;
+      max-width: 800px;
+      margin: 0 auto 10px;
+
+      h3 {
+        white-space: nowrap;
+        max-width: 500px;
+        padding-right: 60px;
+        color: $light-blue;
+        text-transform: uppercase;
+        font-family: $secondary-font;
+      }
+
+      p {
+        border-left: 2px solid $secondary-color;
+        padding: 10px 0 10px 60px;
+        margin-bottom: 0;
+      }
+    }
+
+    &__cont {
+      text-align: center;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      // margin-top: 10px;
+      .company {
+        max-width: 600px;
+        padding: 25px 60px;
+
+        * {
+          margin-bottom: 20px;
+        }
+
+        img {
+          // width: 250px;
+          height: 50px;
+          margin-bottom: 16px;
+        }
+
+        h3 {
+          font-size: 1.3rem;
+          // padding: 10px;
+          // color: $light-blue;
+          // border-bottom: 2px solid $secondary-color;
+        }
+
+        p {
+          font-size: 1rem;
+        }
+      }
+    }
+    @include media("<tablet") {
+      padding: 40px 20px;
+
+      header {
+        max-width: unset;
+        flex-flow: column;
+
+        h3 {
+          width: 100%;
+          padding-right: 0;
+          padding-bottom: 10px;
+          text-align: center;
+          max-width: 400px;
+          border-bottom: 2px solid $secondary-color;
+        }
+
+        p {
+          padding-left: 0;
+          border-left: 0 solid $secondary-color;
+          text-align: center;
+        }
+      }
+
+      .company {
+        padding: 20px 0;
+      }
+    }
+  }
+  // ? Production Units Section
+  .productionunits {
+    padding: 60px 20px 40px;
+    background-color: rgba(0, 76, 156, 0.05);
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+
+    h1 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .products {
+      // max-width: 1200px;
+      // overflow: hidden;
+      // margin: 0 auto;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-evenly;
+      padding: 20px 0;
+
+      &__items {
+        // margin: 20px;
+        display: flex;
+        justify-content: space-around;
+        max-width: 320px;
+
+        .card {
+          margin: 15px 0;
+        }
+
+        header {
+          padding: 0;
+          background-color: transparent;
+
+          img {
+            width: 120%;
+          }
+        }
+      }
+    }
+    @include media("<tablet") {
+      padding-top: 40px;
+
+      h1 {
+        margin-bottom: 0;
+      }
+
+      .products {
+        &__items {
+          @include media("<phone") {
+            max-width: 176px;
+          }
+        }
+      }
+
+      .card {
+        grid-template-rows: auto auto;
+        margin: 15px 0;
+        padding-bottom: 10px;
+
+        .content {
+          line-height: 1.4;
+          padding: 20px;
+        }
+      }
+    }
+  }
+  // ? Infrastructure Section
+  .infrastructure {
+    padding: 0 20px 70px;
+    background-color: rgba(0, 76, 156, 0.05);
+
+    .part-1 {
+      display: flex;
+      flex-flow: row;
+      align-items: center;
+      max-width: 1200px;
+      margin: 0 auto 10px;
+
+      h3 {
+        white-space: nowrap;
+        max-width: 500px;
+        padding-right: 60px;
+        color: $light-blue;
+        text-transform: uppercase;
+        font-family: $secondary-font;
+      }
+
+      p {
+        border-left: 2px solid $secondary-color;
+        padding-left: 60px;
+        margin-bottom: 0;
+      }
+    }
+
+    .part-2 {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      padding: 20px 0 25px;
+      max-width: 1200px;
+      margin: 0 auto;
+
+      > div {
+        flex: 0 0 25%;
+        margin: 20px;
+        min-width: 150px;
+
+        img {
+          border-radius: 6px;
+          width: 100%;
+          @extend %card-2;
+        }
+      }
+    }
+
+    .part-3 {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      align-items: center;
+      flex-flow: row wrap;
+      max-width: 1200px;
+      margin: 0 auto;
+
+      > div {
+        flex: 40% 0 0;
+        text-align: center;
+
+        p {
+          font-size: 1rem;
+        }
+
+        img {
+          margin: 20px;
+          flex: 0 0 20%;
+          // height: 100px;
+          width: 120px;
+        }
+
+        &:nth-child(1) img {
+          width: 220px;
+        }
+
+        &:nth-child(3) img {
+          width: 350px;
+        }
+      }
+    }
+    @include media("<tablet") {
+      padding: 40px 20px;
+
+      .part-1 {
+        max-width: unset;
+        flex-flow: column;
+
+        h3 {
+          width: 100%;
+          padding-right: 0;
+          padding-bottom: 10px;
+          text-align: center;
+          max-width: 400px;
+          border-bottom: 2px solid $secondary-color;
+        }
+
+        p {
+          padding-top: 15px;
+          padding-left: 0;
+          border-left: 0 solid $secondary-color;
+          text-align: center;
+        }
+      }
+
+      .part-2 {
+        > div {
+          margin: 10px;
+        }
+      }
+
+      .part-3 {
+        margin-top: 20px;
+
+        > div {
+          flex: unset;
+          margin-bottom: 15px;
+
+          img {
+            margin: 0 0 5px;
+          }
+        }
+      }
+    }
+  }
+  // ? Leadership Section
+  .leadership {
+    padding: 80px 10px;
+    background-color: rgba(255, 153, 42, 0.05);
+    border-top: 1px solid rgba(0, 0, 0, 0.05);
+
+    h1 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    img {
+      width: 125px;
+      border-radius: 50%;
+      position: absolute;
+      left: 50%;
+      top: -165px;
+      transform: translateX(-50%);
+      border: 5px solid lighten($secondary-color, 80%);
+      @extend %card-3;
+    }
+
+    .members {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-evenly;
+      align-items: center;
+      color: $quaternary-color;
+      margin: 0 auto;
+      // margin-top: 190px;
+      // max-width: 1200px;
+      .member {
+        position: relative;
+        border-radius: 10px;
+        align-self: stretch;
+        // flex: 0 0 25%;
+        max-width: 450px;
+        margin-top: 190px;
+        padding-bottom: 30px;
+        background-color: white;
+        @extend %card-2;
+
+        header {
+          padding: 40px 30px;
+          background-color: $light-blue;
+          border-top-left-radius: 10px;
+          border-top-right-radius: 10px;
+          margin-bottom: 20px;
+
+          h3 {
+            color: rgba(255, 255, 255, 0.78);
+          }
+
+          h5 {
+            color: rgba(255, 255, 255, 0.78);
+            font-size: 0.8rem;
+          }
+        }
+
+        p {
+          font-size: 1rem;
+          padding: 0 30px;
+          margin-bottom: 0;
+          background-color: #fff;
+
+          &.quote {
+            margin-bottom: 18px;
+            font-style: italic;
+          }
+        }
+
+        &:before {
+          content: "";
+          border-color: transparent transparent $light-blue transparent;
+          border-style: solid;
+          border-width: 0 27px 27px 27px;
+          height: 0;
+          width: 0;
+          position: absolute;
+          left: 50%;
+          top: -20px;
+          transform: translateX(-50%);
+        }
+      }
+    }
+    @include media("<phone") {
+      padding: 40px 10px;
+
+      h1 {
+        margin-bottom: 0;
+      }
+
+      img {
+        width: 100px;
+        top: -130px;
+      }
+
+      .members .member {
+        margin-top: 160px;
+
+        header {
+          padding: 30px 20px;
+        }
+
+        p {
+          padding: 0 20px;
+        }
+      }
+    }
+  }
+}
+// Code By Kiran
+// @media (max-width: 1366px) {
+//   .about-page {
+//     .productionunits {
+//       .products {
+//         padding: 25px;
+//         .products__items {
+//           flex: 0 0 calc(30% - 40px);
+//           .card {
+//             margin: 30px auto;
+//           }
+//         }
+//       }
+//     }
+//
+//     .infrastructure {
+//       padding: 20px 40px;
+//       .part-1 {
+//         > div:first-child {
+//           margin: 20px;
+//         }
+//       }
+//     }
+//   }
+// }
+//
+// @media (max-width: 1280px) {
+//   .about-page {
+//     .productionunits {
+//       .products {
+//         padding: 25px;
+//         .products__items {
+//           flex: 0 0 calc(50% - 40px);
+//           .card {
+//             margin: 30px auto;
+//           }
+//         }
+//       }
+//     }
+//
+//     .leadership {
+//       .members {
+//         .member {
+//           // margin: 110px 40px;
+//           flex: 0 0 30%;
+//         }
+//       }
+//     }
+//   }
+// }
+//
+// @media (max-width: 767px) {
+//   .about-page {
+//     .about {
+//       padding: 25px 35px 0;
+//
+//       p {
+//         width: 95%;
+//         margin: 15px auto;
+//       }
+//     }
+//
+//     .groupcompanies__cont {
+//       padding: 25px 35px 0;
+//       .company {
+//         flex: 0 0 50%;
+//         padding: 25px;
+//       }
+//     }
+//
+//     .productionunits {
+//       .products__items {
+//         flex: 0 0 100% !important;
+//       }
+//     }
+//
+//     .infrastructure {
+//       padding: 20px 40px;
+//       .part-1 {
+//         flex-flow: column;
+//       }
+//
+//       .part-1 div:last-child {
+//         border-left: 0;
+//         padding: 20px 0;
+//       }
+//
+//       .part-2 > div {
+//         flex: 0 0 calc(50% - 40px);
+//       }
+//
+//       .part-3 img {
+//         height: auto;
+//       }
+//     }
+//
+//     .leadership {
+//       padding: 60px 40px 60px;
+//
+//       .members {
+//         margin-top: 100px;
+//         .member {
+//           // margin: 110px 40px;
+//           flex: 0 0 100%;
+//
+//           &:nth-child(1) {
+//             margin-top: 100px;
+//           }
+//           &:nth-child(2) {
+//             margin-top: 170px;
+//           }
+//         }
+//       }
+//     }
+//   }
+// }
+//
+// @media (max-width: 500px) {
+//   .about-page {
+//     .about {
+//       h1 {
+//         text-align: left;
+//       }
+//       p {
+//         width: 100%;
+//       }
+//     }
+//
+//     .groupcompanies__cont {
+//       .company {
+//         flex: 0 0 100%;
+//         padding: 25px 0;
+//       }
+//     }
+//
+//     .infrastructure {
+//       padding: 20px 40px;
+//       .part-1 > div {
+//         flex: 0 0 100% !important;
+//       }
+//
+//       .part-2 > div {
+//         flex: 0 0 100%;
+//         margin: 15px 0;
+//         text-align: center;
+//       }
+//
+//       .part-3 img {
+//         margin: 10px 0;
+//         height: auto;
+//         width: 100%;
+//       }
+//     }
+//   }
+// }

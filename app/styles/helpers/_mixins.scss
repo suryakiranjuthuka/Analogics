@@ -1,0 +1,54 @@
+// Responsive Mixins
+
+// Breakpoints are as follows
+
+// smport
+
+// smland
+
+// md
+
+// lg
+
+// xl
+
+@mixin respond($breakpoint) {
+  // Small Device Portait
+  @if $breakpoint == smport {
+    @media (max-width: 57.5rem) {
+      // Lessthan 575px;
+      @content;
+    }
+  }
+
+  // Small Device Land
+  @if $breakpoint == smland {
+    @media (max-width: 76.7rem) {
+      // Lessthan 767px;
+      @content;
+    }
+  }
+
+  // Medium Devices
+  @if $breakpoint == md {
+    @media (max-width: 99.1rem) {
+      // Lessthan 991px;
+      @content;
+    }
+  }
+
+  // Large Devices
+  @if $breakpoint == lg {
+    @media (max-width: 119.9rem) {
+      // Lessthan 1199px;
+      @content;
+    }
+  }
+
+  @if $breakpoint == xl {
+    @media (max-width: 192rem) {
+      // Lessthan 1920px;
+      @content;
+    }
+  }
+}

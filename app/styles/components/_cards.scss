@@ -1,0 +1,36 @@
+.card {
+  display: grid;
+  grid-template-rows: 257px auto 60px;
+  border-radius: 10px;
+  margin: 30px 0;
+  max-width: 420px;
+  background-color: white;
+  text-align: left;
+  @extend %boxShadow;
+
+header{
+    border-radius: inherit;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+    overflow: hidden;
+    padding: 20px 40px;
+    padding-bottom: 60px;
+    text-align: center;
+    background-color: #ff992a;
+    background-attachment: fixed;
+    background-size: cover;
+    clip-path: polygon(0 0, 100% 0%, 100% 85%, 0% 100%);
+  }
+
+  .content {
+    padding: 20px 40px 14px;
+    margin: 0;
+    place-self: start center;
+  }
+
+  .link {
+    place-self: start;
+    margin: 0px;
+    margin-left: 40px
+  }
+}

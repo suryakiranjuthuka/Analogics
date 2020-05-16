@@ -1,0 +1,225 @@
+// ? New code
+
+.contact-page {
+  // Contact Info Block
+  .contactinfo {
+    padding: 20px 0 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: start;
+
+    .address-info,
+    .form-container {
+      flex: 0 0 50%;
+      padding: 50px;
+    }
+
+    .address-info {
+      flex: 0 0 40%;
+    }
+
+    .address {
+      // @extend %card-2;
+      box-shadow: 5px 5px 25px 0 rgba(46, 61, 73, 0.2);
+      border: 1px solid rgba(0, 0, 0, 0.05);
+      padding: 40px;
+      margin-bottom: 50px;
+      border-radius: 10px;
+      border-left: 3px solid $secondary-color;
+      // font-weight: 500;
+      h3 {
+        text-transform: uppercase;
+        color: $light-blue;
+      }
+
+      h4 {
+        font-family: $secondary-font;
+        font-weight: 700;
+      }
+
+      .point {
+        margin: 15px 0 6px;
+        font-size: 1rem;
+        background-image: url("../images/icons/location.svg");
+        background-repeat: no-repeat;
+        padding-left: 45px;
+      }
+
+      .place {
+        padding-left: 45px;
+      }
+
+      .tel {
+        background-image: url("../images/icons/phone.svg");
+        background-repeat: no-repeat;
+        padding-left: 45px;
+      }
+
+      .fax {
+        background-image: url("../images/icons/fax.svg");
+        background-repeat: no-repeat;
+        padding-left: 45px;
+      }
+
+      .mail {
+        background-image: url("../images/icons/mail.svg");
+        background-repeat: no-repeat;
+        padding-left: 45px;
+      }
+
+      p {
+        font-size: 1rem;
+        line-height: 1.4;
+        padding-bottom: 4px;
+        // font-weight: 600;
+      }
+
+      a {
+        margin-left: auto;
+      }
+    }
+  }
+  // Form
+  .formcont {
+    // @extend %card-1;
+    box-shadow: 5px 5px 25px 0 rgba(46, 61, 73, 0.2);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    border-radius: 10px;
+    overflow: hidden;
+    color: #fff;
+
+    header {
+      border-bottom: 1px solid rgba(0,0,0,.1);
+      padding: 20px 45px;
+      background-color: $light-blue;
+      // background-color: #eee;
+      color: rgba(255,255,255,.78);
+
+      p {
+        margin-bottom: 0;
+        // color: rgba(0,0,0,.78);
+      }
+
+      > * {
+        color: currentColor;
+      }
+
+      .info {
+        padding-top: 20px;
+        margin-top: 20px;
+        border-top: 1px solid rgba(0, 0, 0, 0.25);
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+
+        > div {
+          flex: 0 0 40%;
+          display: flex;
+          align-items: center;
+          padding: 0 20px;
+
+          img {
+            width: 46px;
+            padding-right: 20px;
+          }
+
+          div > * {
+            color: inherit;
+            font-size: 1rem;
+          }
+        }
+      }
+    }
+    // Main Form
+    .mainform {
+      padding: 20px 25px;
+      form {
+        position: relative;
+      }
+
+      input {
+        border: 0;
+        padding: 10px;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+        width: 100%;
+      }
+
+      .inputscont {
+        display: flex;
+        flex-wrap: wrap;
+
+        input {
+          flex: 0 0 94%;
+          margin: 20px 15px;
+
+          &:focus {
+            outline: none;
+          }
+        }
+      }
+
+      button {
+        margin-bottom: 40px;
+        margin-left: 20px;
+        z-index: 2;
+      }
+    }
+  }
+}
+@include media("<desktop") {
+  .contact-page {
+    .contactinfo {
+      .address {
+        padding: 30px;
+
+        h3 {
+          font-size: 1.2rem;
+        }
+      }
+
+      .address-info {
+        display: flex;
+        width: 100%;
+        flex: 0 0 100%;
+        padding: 40px 20px;
+        flex-flow: row wrap;
+        justify-content: space-around;
+        @include media("<700px") {
+          flex-flow: column wrap;
+        }
+
+        .address {
+          flex: 45% 0 0;
+          margin-bottom: 20px;
+        }
+      }
+
+      .form-container {
+        flex: unset;
+        max-width: 800px;
+        padding: 0 20px 50px;
+      }
+    }
+
+    .formcont {
+      header {
+        padding: 25px 30px 20px;
+
+        h2 {
+          font-size: 1.6rem;
+        }
+      }
+
+      .info {
+        flex-flow: column;
+        align-items: flex-start !important;
+
+        > div {
+          flex: 0 0 100%;
+          margin-bottom: 15px;
+        }
+      }
+    }
+  }
+}

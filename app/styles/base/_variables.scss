@@ -1,0 +1,17 @@
+// Theme Colors
+$primary-color: #003d7a; // rgba(0,61,122,.1);
+$secondary-color: #ff992a; // rgba(255,153,42,.1);
+$light-blue: #004c9c; // rgba(0,76,156,.1);
+$tertiary-color: #63c8f2;
+$quaternary-color: #fff;
+
+// Fonts
+$primary-font: "Arvo", sans-serif;
+$secondary-font: "Lato", sans-serif;
+
+// Media Queries
+$breakpoints: (
+  phone: 500px,
+  tablet: 900px,
+  desktop: 1280px
+);
