@@ -1,3 +1,3 @@
 # Analogics
 
-[[Dev Website Link]](https://suryakiranjuthuka.github.io/Analogics/)
+[[ Development Website Link ]](https://suryakiranjuthuka.github.io/Analogics/)
