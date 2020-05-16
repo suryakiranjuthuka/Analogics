@@ -7,7 +7,7 @@ Yarn 1.22.4
 - gulp serve
 - gulp build
 
-**Note:** *After Gulp Build copy over the fonts directory files to dist/fonts.*
+**Note:** *After Gulp Build copy over the "app/fonts" directory files to "dist/fonts" directory.*
 
 #### Yarn Examples
 - yarn info uglify-es versions

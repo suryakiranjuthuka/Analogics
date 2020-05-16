@@ -28,8 +28,7 @@
     "gulp-useref": "^3.0.0",
     "main-bower-files": "^2.5.0",
     "run-sequence": "^1.2.2",
-    "uglify-es": "~3.3.10",
-    "wiredep": "^4.0.0"
+    "uglify-es": "~3.3.10"
   },
   "eslintConfig": {
     "env": {
